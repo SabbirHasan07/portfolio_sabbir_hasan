@@ -4,7 +4,7 @@ import roundedImage from "../public/rounded-text.png";
 import { HiArrowRight } from "react-icons/hi2";
 import Image from "next/image";
 const ProjectsBtn = () => {
-  return <div className="mx-auto xl:mx-0">
+  return <div className="mx-auto xl:mx-0 xl:mb-28 mb-28">
     <Link href={'/work'} className="relative w-[185px] h-[185px] flex justify-center items-center bg-circleStar bg-cover bg-centerbg-no-repeat grooup">
       <Image
       src={'/rounded-text.png'}
