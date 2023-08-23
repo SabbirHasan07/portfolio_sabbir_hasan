@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { TbBrandNextjs } from "react-icons/tb";
-
+import particles from "../../components/ParticlesContainer";
 
 // icons
 import {
@@ -13,9 +13,6 @@ import {
 } from "react-icons/fa";
 
 import {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
   SiC,
   SiCplusplus,
   SiAdobephotoshop,
@@ -41,7 +38,7 @@ const aboutData = [
       },
       {
         title: 'Programming Skills',
-        icons: [<SiC/>, <SiCplusplus />, <SiAdobephotoshop />],
+        icons: [<SiC/>, <SiCplusplus />],
       },
       {
         title: 'Around 200+ problems solve in the differents online judge.'
@@ -64,30 +61,27 @@ const aboutData = [
     title: 'credentials',
     info: [
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
-      },
-      {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
-      },
-      {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
-      },
+        title: 'BSc. in Computer Science and Engineering - Daffodil International University, Dhaka',
+        stage: '- 2022',
+      }
     ],
   },
   {
-    title: 'awards',
+    title: 'Awards',
     info: [
       {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
+        title: 'Full free Scholarship - DIU',
+        stage: '2018 - 2022',
       },
       {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
+        title: 'Programming Hero',
+        stage: ' - 2022',
       },
+      {
+        title: 'Government Scholarship - class( V, Viii )',
+        stage: '2009 and 2011',
+      },
+      
     ],
   },
 ];
@@ -114,7 +108,7 @@ const About = () => {
           alt=''
         />
         </div>
-        <p className='px-4 mt-0 justify-center text-center items-center xl:mt-16 text-white xl:text-2xl'> I have successfully completed 12 projects that <br /> showcase my proficiency and versatility.</p>
+        <p className=' px-4 mt-0 justify-center text-center items-center xl:mt-16 text-white xl:text-2xl'> I have successfully completed 12 projects that <br /> showcase my proficiency and versatility.</p>
       </div>
       <div className='flex flex-col mb-9'>
         <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
@@ -129,7 +123,7 @@ const About = () => {
             )
           })}
         </div>
-        <div className='  flex flex-col  items-center xl:items-start'>
+        <div className=' flex flex-col  items-center xl:items-start'>
           {aboutData[index].info.map((item, itemIndex) => {
             return (
               <div key={itemIndex}>
