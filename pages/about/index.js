@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { TbBrandNextjs } from "react-icons/tb";
 import particles from "../../components/ParticlesContainer";
+import CountUp from 'react-countup';
 
 // icons
 import {
@@ -27,18 +28,18 @@ const aboutData = [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <TbBrandNextjs/>
+          <FaHtml5 key={''} />,
+          <FaCss3 key={''} />,
+          <FaJs key={''} />,
+          <FaReact key={''}  />,
+          <TbBrandNextjs key={''} />
           
           
         ],
       },
       {
         title: 'Programming Skills',
-        icons: [<SiC/>, <SiCplusplus />],
+        icons: [<SiC key={''} />, <SiCplusplus key={''} />],
       },
       {
         title: 'Around 200+ problems solve in the differents online judge.'
@@ -91,6 +92,7 @@ import Avatar from '../../components/Avatar';
 import Circles from '../../components/Circles';
 import Image from 'next/image';
 
+
 const About = () => {
   const [index, setIndex] = useState(0);
   return <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
@@ -99,7 +101,7 @@ const About = () => {
       <Avatar />
     </div>
     <div className='container mx-auto h-full flex flex-col items-center xl:flex-grow gap-x-6'>
-      <div className='flex  justify-center xl:pb-8 '>
+      <div className='flex  justify-center xl:pb-8 mb-6 xl:mb-0'>
         <div><Image
           src={'/sabbir.jpeg'}
           height={300}
@@ -108,7 +110,8 @@ const About = () => {
           alt=''
         />
         </div>
-        <p className=' px-4 mt-0 justify-center text-center items-center xl:mt-16 text-white xl:text-2xl'> I have successfully completed 12 projects that <br /> showcase my proficiency and versatility.</p>
+        <p className=' px-4 mt-0 justify-center text-center items-center xl:mt-16 text-white xl:text-2xl'> I have successfully completed <CountUp className='text-accent text-2xl font-bold' start={0} end={12} duration={5}/> + projects that <br /> showcase my proficiency and versatility.</p>
+        <div></div>
       </div>
       <div className='flex flex-col mb-9'>
         <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
