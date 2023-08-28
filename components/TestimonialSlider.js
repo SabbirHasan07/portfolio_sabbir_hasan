@@ -3,25 +3,25 @@ import _exports from "tailwind-scrollbar";
 // testimonial data
 export const testimonialData = [
   {
-    image: '/t-avt-1.png',
-    name: 'Anne Smith',
+    image: '/t-avt-1.jpg',
+    name: 'Mirza Adnan',
     position: 'Customer',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'The sites seamless functionality, elegant design, and responsive interface are commendable.',
   },
   {
-    image: '/t-avt-2.png',
-    name: 'Jane Doe',
+    image: '/t-.jpg',
+    name: 'Rahat Anan',
     position: 'Customer',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Impressive web development work! Clean code, seamless functionality, and a user-friendly interface.',
   },
   {
-    image: '/t-avt-3.png',
-    name: 'Jhon Doe',
+    image: '/sakib01.jpg',
+    name: 'Ashakur Sakib',
     position: 'Customer',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Outstanding web development work! The site functionality is seamless, design is captivating, and code is immaculate. ',
   },
 ];
 
@@ -33,12 +33,12 @@ import 'swiper/css/navigation'
 // icons
 import { FaQuoteLeft } from 'react-icons/fa'
 
-import {Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination } from 'swiper';
 import Image from 'next/image';
 
 // data
 import { motion } from "framer-motion";
-import {fadeIn} from '../variants';
+import { fadeIn } from '../variants';
 const TestimonialSlider = () => {
   return <Swiper
     Navigation={true}
@@ -46,7 +46,7 @@ const TestimonialSlider = () => {
       clickable: true,
     }}
     modules={[Navigation, Pagination]}
-    className='h-[400px]'
+    className='h-[350px] xl:h-[250px]'
 
   >
     {
@@ -54,24 +54,27 @@ const TestimonialSlider = () => {
         return <SwiperSlide
           key={index}
         >
-          <div className="xl:flex items-center gap-x-8 h-48 px-16">
+          <div className="xl:flex  gap-x-8  px-16 mt-4 xl:mt-16">
             <div className=" mx-w-[300px] flex flex-col xl:justify-center realative max-auto">
 
-              <div className="flex flex-col justify-center text-center">
+              <div className="flex xl:flex-col justify-center text-center gap-x-2">
                 <div className="mb-2">
                   <Image
                     src={person?.image} width={100} height={100}
+                    className="rounded-full"
                     alt=" "
                   />
                 </div>
-                <div className="text-lg">{person?.name}</div>
-                <div className="text-[12px] uppercase font-extralight tracking-widest">{person?.position}</div>
+                <div className="mt-4 xl:mt-0 flex flex-col">
+                  <div className="text-lg">{person?.name}</div>
+                  <div className="text-[12px] uppercase font-extralight tracking-widest">{person?.position}</div>
+                </div>
               </div>
 
             </div>
-            <div className=" flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20">
-              <div><FaQuoteLeft className="mx-auto text-4xl text-white/30" /></ div>
-              <div className="xl:text-l text-center md:text-left">{person?.message}</div>
+            <div className=" flex-1 flex flex-col before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20">
+              <div><FaQuoteLeft className=" mx-auto text-4xl mb-2 text-white/30" /></ div>
+              <div className="xl:text-l text-sart md:text-left">{person?.message}</div>
             </div>
           </div>
 

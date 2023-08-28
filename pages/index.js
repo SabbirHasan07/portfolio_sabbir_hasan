@@ -2,8 +2,6 @@ import Image from "next/image";
 
 //components
 import ParticlesContainer from '../components/ParticlesContainer';
-import ProjectionsBtn from '../components/ProjectsBtn';
-import Avatar from '../components/Avatar';
 import { motion } from "framer-motion";
 import { fadeIn } from '../variants';
 import ProjectsBtn from "../components/ProjectsBtn";
@@ -14,9 +12,9 @@ const Home = () => {
     <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
       <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
         {/*title*/}
-        <h1 className="text-2xl font-normal mb-5 mt-12">
-          MERN Stack Developer ||<span className="text-accent font-extralight"> Software Developer</span>
-        </h1>
+        <h2 className="h2 font-normal mb-5 mt-12">
+          MERN Stack Developer <br /><span className="text-accent font-extralight"> Software Developer</span>
+        </h2>
         {/*subtitle*/}
         <p className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">A self-motivated IT professional with huge knowledge and proficiency in ReactJS, NodeJS, and mobile responsive web development, as well as
 strong skills and ability in writing clean and efficient code.
@@ -48,7 +46,7 @@ strong skills and ability in writing clean and efficient code.
        exit='hidden'
        transition={{duration:1, ease:'easeInOut'}}
       className="w-full h-full max-w-[500px] max-h-[500px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]">
-        <Avatar/>
+       
       </motion.div>
     </div>
   </div>
