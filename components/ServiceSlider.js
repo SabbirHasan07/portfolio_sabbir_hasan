@@ -20,30 +20,27 @@ const serviceData = [
   {
     icon: <RxDesktop />,
     title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Gererally,MERN Stact use for development. NEXTJS also used for different website.',
   },
   {
-    icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <RxReader />,
+    title: 'ASP .NET',
+    description: 'I am highly interested in this field. In future, I want to work for this field.',
   },
   {
     icon: <RxRocket />,
     title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'I also have interest in this field. In future, I will have interest to work in this field.',
   },
   {
-    icon: <RxCrop />,
-    title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <RxPencil2 />,
+    title: 'Design',
+    description: 'Familiar with Figma Design.',
   },
+  
 
-  {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  ,
+  
+  
 ];
 
 const ServiceSlider = () => {
@@ -62,7 +59,7 @@ const ServiceSlider = () => {
     clickable:true,
   }}
   modules={[FreeMode, Pagination]}
-  className='h-[280px] xl:h-[300px]'
+  className='h-[300px] xl:h-[320px]'
   
   >
     {
