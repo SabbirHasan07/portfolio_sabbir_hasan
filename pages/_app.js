@@ -4,7 +4,7 @@ import Transition from '../components/Transition';
 import { useRouter } from 'next/router';
 //framer mation
 import { AnimatePresence, motion } from 'framer-motion';
-import { Router } from 'react-router-dom';
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
