@@ -8,6 +8,7 @@ import {BsArrowRight} from 'react-icons/bs'
 
 import { Pagination } from 'swiper';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // data
 export const workSlides = {
@@ -16,19 +17,23 @@ export const workSlides = {
       images: [
         {
           title: 'title',
-          path: '/thumb1.jpg',
+          path: '/thumb1.jpeg',
+          link:'https://grillandbraai.vercel.app/'
         },
         {
           title: 'title',
-          path: '/thumb2.jpg',
+          path: '/thumb2.jpeg',
+          link:'https://aircnc-39233.web.app/'
         },
         {
           title: 'title',
-          path: '/thumb3.jpg',
+          path: '/thumb3.jpeg',
+          link:'https://wild-star-auth.web.app/'
         },
         {
           title: 'title',
-          path: '/thumb4.jpg',
+          path: '/thumb4.jpeg',
+          link:'https://programming-world-ce6f6.web.app/'
         },
       ],
     },
@@ -36,19 +41,25 @@ export const workSlides = {
       images: [
         {
           title: 'title',
-          path: '/thumb4.jpg',
+          path: '/thumb2.jpeg',
+          link:'https://aircnc-39233.web.app/'
+        },
+        
+        {
+          title: 'title',
+          path: '/thumb1.jpeg',
+          link:'https://grillandbraai.vercel.app/'
         },
         {
           title: 'title',
-          path: '/thumb1.jpg',
+          path: '/thumb4.jpeg',
+          link:'https://programming-world-ce6f6.web.app/'
         },
+       
         {
           title: 'title',
-          path: '/thumb2.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb3.jpg',
+          path: '/thumb3.jpeg',
+          link:'https://wild-star-auth.web.app/'
         },
       ],
     },
@@ -76,7 +87,7 @@ const WorkSlider = () => {
               slide.images.map((image,index)=>{
                return <div
                className='relative rounded-lg overflow-hidden flex items-center justify-center group' key={index}>
-                <div className='flex items-center justify-center relative overflow-hidden group'>
+                <Link href={`${image.link}`} className='flex items-center justify-center relative overflow-hidden group'>
                   <Image
                   src={image?.path} width={400} height={200}
                   alt=''
@@ -91,7 +102,7 @@ const WorkSlider = () => {
                       <div className='text-xl'><BsArrowRight/></div>
                     </div>
                   </div>
-                </div>
+                </Link>
                </div>
               })
             }
