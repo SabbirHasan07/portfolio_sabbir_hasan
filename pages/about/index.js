@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { TbBrandNextjs } from "react-icons/tb";
-import particles from "../../components/ParticlesContainer";
 import CountUp from 'react-countup';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
 
 // icons
 import {
@@ -93,30 +94,51 @@ const About = () => {
 
     <div className='container mx-auto h-full flex flex-col items-center xl:flex-grow gap-x-4 '>
       <div className='flex  justify-center xl:pb-4 mb-4 xl:mb-0'>
-        <div className='border-2'><Image
+        <motion.div
+         variants={fadeIn('up', 0.2)}
+         initial='hidden'
+         animate='show'
+         exit='hidden'
+        className='xl:border-2'><Image
           src={'/sabbir.jpeg'}
           height={300}
           width={300}
           className='h-36 w-56 xl:h-48 xl:w-48'
           alt=''
         />
-        </div>
-        <p className=' px-4 mt-0 justify-center text-center items-center xl:mt-16 text-white xl:text-2xl'> I have successfully completed <CountUp className='text-accent text-2xl font-bold' start={0} end={12} duration={5} /><span className='text-accent'>+</span> projects that <br /> showcase my proficiency and versatility.</p>
+        </motion.div>
+        <motion.p
+         variants={fadeIn('down', 0.4)}
+         initial='hidden'
+         animate='show'
+         exit='hidden'
+        className=' px-4 mt-0 justify-center text-center items-center xl:mt-16 text-white xl:text-2xl'> I have successfully completed <CountUp className='text-accent text-2xl font-bold' start={0} end={12} duration={5} /><span className='text-accent'>+</span> projects that <br /> showcase my proficiency and versatility.</motion.p>
         <div></div>
       </div>
       <div className='xl:flex xl:gap-x-12'>
-        <div className='grid grid-cols-2 m-0 p-0 gap-x-3 border-2 pt-1 rounded-md mb-1 xl:border-0'>
+        <motion.div
+         variants={fadeIn('right', 0.6)}
+         initial='hidden'
+         animate='show'
+         exit='hidden'
+        className='grid grid-cols-2 m-0 p-0 gap-x-3 border-2 pt-1 rounded-md mb-1 xl:border-0'>
           <div>
             <p className='text-white font-bold'>SATIESFIED <br /> CLIENTS </p>
-            <p><CountUp className='text-accent text-2xl font-bold' start={0} end={5} duration={6} /><span className='text-accent'>+</span> </p>
+            <p><CountUp className='text-accent text-2xl font-bold' start={0} end={5} duration={12} /><span className='text-accent'>+</span> </p>
           </div>
           <div>
             <p className='text-white font-bold'>PROFESSIONAL <br /> PROJECTS </p>
-            <p><CountUp className='text-accent text-2xl font-bold' start={0} end={2} duration={7} /><span className='text-accent'>+</span> </p>
+            <p><CountUp className='text-accent text-2xl font-bold' start={0} end={2} duration={13} /><span className='text-accent'>+</span> </p>
           </div>
 
-        </div>
-        <div className='flex flex-col '>
+        </motion.div>
+        <motion.div
+         variants={fadeIn('left', 0.8)}
+         initial='hidden'
+         animate='show'
+         exit='hidden'
+        
+        className='flex flex-col '>
           <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
             {aboutData.map((item, itemIndex) => {
               return (
@@ -148,7 +170,7 @@ const About = () => {
               )
             })}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   </div>;

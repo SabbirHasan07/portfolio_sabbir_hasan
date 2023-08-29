@@ -12,19 +12,29 @@ const Home = () => {
     <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
       <div className=" text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
         {/*title*/}
-        <h2 className="text-2xl font-bold mb-5 mt-12">
+        <motion.h2
+         variants={fadeIn('left', 0.2)}
+         initial='hidden'
+         animate='show'
+         exit='hidden'
+        className="text-2xl font-bold mb-5 mt-12">
           MERN Stack Developer <br /><span className="text-accent font-extralight"> Software Developer</span>
-        </h2>
+        </motion.h2>
         {/*subtitle*/}
-        <p className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">A self-motivated IT professional with huge knowledge and proficiency in ReactJS, NodeJS, and mobile responsive web development, as well as
+        <motion.p 
+         variants={fadeIn('right', 0.4)}
+         initial='hidden'
+         animate='show'
+         exit='hidden'
+        className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">A self-motivated IT professional with huge knowledge and proficiency in ReactJS, NodeJS, and mobile responsive web development, as well as
 strong skills and ability in writing clean and efficient code.
-        </p>
+        </motion.p>
         {/*btn*/}
         <div className="flex justify-center xl:hidden relative">
           <ProjectsBtn />
         </div>
         <motion.div className="hidden xl:flex"
-          variants={fadeIn('down', 0.4)}
+          variants={fadeIn('down', 0.6)}
           initial='hidden'
           animate='show'
           exit='hidden'
